@@ -32,8 +32,32 @@ To recap, this project is a result of your parent’s desire to invest in altern
              Cells(i, 3).Interior.Color = vbRed
 ####  Comments summited according to Best Practices for Writing Readable Code
 ##  Results
-The All Stock Analysis dataset was consistent with that of the Refactored Analysis dataset.  However the runtime varies in successful outcomes.
-####The initial 2017 code ran .08125 seconds.
+The All Stock Analysis datasets were consistent with that of the Refactored Analysis datasete.  However the runtimes varied in outcomes.The initial 2017 code ran .08125 seconds:
+![Before Refactoring 2017 Stock Data Set](https://github.com/jacquie0583/Stock-Analysis/blob/main/Before%20refactoring%202017.png)
 
-the refactored 2017 code ran
+The refactored 2017 code ran:
 
+![Refracted 2017 Stock Dataset](https://github.com/jacquie0583/Stock-Analysis/blob/main/After%20refactoring%202017.png?raw=true)
+
+Our attempts proved fruitful in this code run. The trial allowed for a decrease of .09 seconds However, the outcome was very different with the 2018 dataset and this phenomenon has our staff baffled.
+![Before Refactoring 2018 Stock Data Set](https://github.com/jacquie0583/Stock-Analysis/blob/main/Before%20Refactoring%202018.png)
+
+The refactored 2018 code ran:
+
+![Refracted 2018 Stock Dataset](https://github.com/jacquie0583/Stock-Analysis/blob/main/After%20refactoring%202018.png)
+
+This trial time decreased about -.02 in the refactored coding.  Further analysis needs to be comed to account for this discrepancy.
+##  Summary
+###  Advantages of refactoring code
+            Refactoring is a way to optimize the existing code by making it easier, faster and more               efficient without changing its behavior.
+            Facilitates the discovery of bugs.
+            Improve readability and Maintainability
+###  Disadvantages of refactoring code
+            Time Consuming
+            Possibility of introducing mistakes 
+            Can be expensive and risky
+            Change th intent of the code
+
+###  How do these Pros and cons apply to refactoring the original VBA script
+The pros are that the run time decreased and thus making the code more efficient for the 2017 data set.  However, cons are that this alteration works for some data sets but not for others.  The 2018 data run time increased.
+The other cons are that its very time consuming and can allow for error and an alteration of intent.  For example, if a particular line is changed in the order the data is read, a new meaning of the code could result or can cause an inability of the code to run properly.
