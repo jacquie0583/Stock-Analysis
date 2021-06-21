@@ -49,7 +49,7 @@ The refactored 2018 code ran:
 This trial time decreased about -.02 in the refactored coding.  Further analysis needs to be comed to account for this discrepancy.
 ##  Summary
 ###  Advantages of refactoring code
-            Refactoring is a way to optimize the existing code by making it easier, faster and more               efficient without changing its behavior.
+            Refactoring is a way to optimize the existing code by making it easier, faster and more efficient without changing its behavior.
             Facilitates the discovery of bugs.
             Improve readability and Maintainability
 ###  Disadvantages of refactoring code
