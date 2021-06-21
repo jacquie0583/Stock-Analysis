@@ -33,6 +33,7 @@ To recap, this project is a result of your parent’s desire to invest in altern
 ####  Comments summited according to Best Practices for Writing Readable Code
 ##  Results
 The All Stock Analysis datasets were consistent with that of the Refactored Analysis datasete.  However the runtimes varied in outcomes.The initial 2017 code ran .08125 seconds:
+
 ![Before Refactoring 2017 Stock Data Set](https://github.com/jacquie0583/Stock-Analysis/blob/main/Before%20refactoring%202017.png)
 
 The refactored 2017 code ran:
@@ -40,6 +41,7 @@ The refactored 2017 code ran:
 ![Refracted 2017 Stock Dataset](https://github.com/jacquie0583/Stock-Analysis/blob/main/After%20refactoring%202017.png?raw=true)
 
 Our attempts proved fruitful in this code run. The trial allowed for a decrease of .09 seconds However, the outcome was very different with the 2018 dataset and this phenomenon has our staff baffled.
+
 ![Before Refactoring 2018 Stock Data Set](https://github.com/jacquie0583/Stock-Analysis/blob/main/Before%20Refactoring%202018.png)
 
 The refactored 2018 code ran:
