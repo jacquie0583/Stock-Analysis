@@ -7,29 +7,29 @@ To recap, this project is a result of your parent’s desire to invest in altern
 ##  Analysis
 ### Refactor VBA Code Process Explainedw with Examples
 ####  TickerIndex was created as a variable and set to zero before iterating over all the rows.  It will be used to access the appropriate index across the four different arrays.
-      For i = 0 To 11
-        tickerIndex = tickers(i)
+   For i = 0 To 11
+   tickerIndex = tickers(i)
 ####  Output Arrays were designated as Long data type (ticker Volumes) and Single data type (ticker starting Prices and ticker ending prices).
-      Dim tickerVolumes As Long
-      Dim tickerStartingPrices As Single
-      Dim tickerEndingPrices As Single
+   Dim tickerVolumes As Long
+   Dim tickerStartingPrices As Single
+   Dim tickerEndingPrices As Single
 ####  A loop initiates the tickerVolume to Zero and accessed by the tickerIndex.  Providing a filter if the next row's ticker doesn't match, the tickerIdeex is increased.
-       tickerVolumes = 0
-     For j = 2 To RowCount
-        If Cells(j, 1).Value = tickerIndex Then
+   tickerVolumes = 0
+   For j = 2 To RowCount
+   If Cells(j, 1).Value = tickerIndex Then
 ####  The code loops through the stock data, reading and storing the data from all the rows.  Modifying withing the loop, allows for the increase of the tickerVolume variable thereby increasing the tickerVolume for the stock ticker. We utilized if-then statements as a filter if to assign the closing price to the ticker starting prices and ticker ending prices variable.
-      If Cells(j, 1).Value = tickerIndex Then
-        tickerVolumes = tickerVolumes + Cells(j, 8).Value
+   If Cells(j, 1).Value = tickerIndex Then
+      tickerVolumes = tickerVolumes + Cells(j, 8).Value
          If Cells(j - 1, 1).Value <> tickerIndex And Cells(j, 1).Value = tickerIndex Then
               tickerStartingPrices = Cells(j, 6).Value
          End If
         If Cells(j + 1, 1).Value <> tickerIndex And Cells(j, 1).Value = tickerIndex Then
               tickerEndingPrices = Cells(j, 6).Value
 ####  Formatting the cells with codes added color and self-explanatory visual appeal.
-         If Cells(i, 3) > 0 Then
-            Cells(i, 3).Interior.Color = vbGreen
-         Else
-             Cells(i, 3).Interior.Color = vbRed
+   If Cells(i, 3) > 0 Then
+         Cells(i, 3).Interior.Color = vbGreen
+      Else
+          Cells(i, 3).Interior.Color = vbRed
 ####  Comments summited according to Best Practices for Writing Readable Code
 ##  Results
 The All Stock Analysis datasets were consistent with that of the Refactored Analysis datasete.  However the runtimes varied in outcomes.The initial 2017 code ran .08125 seconds:
@@ -51,14 +51,14 @@ The refactored 2018 code ran:
 This trial time decreased about -.02 in the refactored coding.  Further analysis needs to be comed to account for this discrepancy.
 ##  Summary
 ###  Advantages of refactoring code
-            Refactoring is a way to optimize the existing code by making it easier, faster and more efficient without changing its behavior.
-            Facilitates the discovery of bugs.
-            Improve readability and Maintainability
+   Refactoring is a way to optimize the existing code by making it easier, faster and more efficient without changing its behavior.
+   Facilitates the discovery of bugs.
+   Improve readability and Maintainability
 ###  Disadvantages of refactoring code
-            Time Consuming
-            Possibility of introducing mistakes 
-            Can be expensive and risky
-            Change th intent of the code
+   Time Consuming
+   Possibility of introducing mistakes 
+   Can be expensive and risky
+   Change th intent of the code
 
 ###  How do these Pros and cons apply to refactoring the original VBA script
 The pros are that the run time decreased and thus making the code more efficient for the 2017 data set.  However, cons are that this alteration works for some data sets but not for others.  The 2018 data run time increased.
